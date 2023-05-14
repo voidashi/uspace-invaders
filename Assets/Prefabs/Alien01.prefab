@@ -118,9 +118,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2577010813561483471}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fcfb526b4a544146b704d5fac6b3a46, type: 3}
+  m_Script: {fileID: 11500000, guid: 216bf4502b42ba04c94148a3dfdfad17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 6690963595018831738, guid: ae2365bda9cc1c347a0019efe4b10824, type: 3}
   logic: {fileID: 0}
   speed: 2
 --- !u!61 &5792100964967241000
@@ -157,7 +158,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2577010813561483471}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
