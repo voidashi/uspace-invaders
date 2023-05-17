@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 2577010813561483568}
   - component: {fileID: 2577010813561483569}
   - component: {fileID: 2577010813561483470}
-  - component: {fileID: -4937716321940372603}
   - component: {fileID: 5792100964967241000}
   - component: {fileID: 163316609601119031}
+  - component: {fileID: -6089849523849723562}
   m_Layer: 8
-  m_Name: Alien01
+  m_Name: Alien05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1957831710, guid: 4de33a6c62c313249819454c3d2def2a, type: 3}
+  m_Sprite: {fileID: -768279680, guid: 4de33a6c62c313249819454c3d2def2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 2577010813561483471}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a3c5673691b9f04a983de29efc8108b, type: 2}
+  m_Controller: {fileID: 9100000, guid: f7e7f812a781ada45b081cf908241d89, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -109,21 +109,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-4937716321940372603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2577010813561483471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 216bf4502b42ba04c94148a3dfdfad17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 6690963595018831738, guid: ae2365bda9cc1c347a0019efe4b10824, type: 3}
-  logic: {fileID: 0}
-  speed: 2
 --- !u!61 &5792100964967241000
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,3 +156,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-6089849523849723562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2577010813561483471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 516a42d4d369edd41bb0e9ba348cd79f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logic: {fileID: 0}
+  enemyBulletPrefab: {fileID: 122345846466364087, guid: 50b3530d2146dee41aeab9c911436c54, type: 3}

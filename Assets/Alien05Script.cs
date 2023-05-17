@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Alien01Script : MonoBehaviour
+public class Alien05Script : MonoBehaviour
 {
     public LogicScript logic;
+    public GameObject enemyBulletPrefab;
+    public int shootChance = 5000;
 
     private Animator anim;
 
@@ -18,7 +20,11 @@ public class Alien01Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-
+        // has a 1 in shootChance chance of shooting every frame
+        if(Random.Range(0, shootChance) == 0)
+        {
+            Instantiate(enemyBulletPrefab, transform.position, transform.rotation);
+        }
     }
 
     // Destroy the alien if it collides with a bullet
