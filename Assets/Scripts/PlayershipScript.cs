@@ -5,13 +5,15 @@ using UnityEngine;
 public class PlayershipScript : MonoBehaviour
 {
     public GameObject bulletPrefab;
+    public LogicScript logic;
+    public int health = 3;
 
     private bool isShooting = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
@@ -56,8 +58,15 @@ public class PlayershipScript : MonoBehaviour
         // Collide on layer 8 (EnemyBullet)
         if (collision.gameObject.layer == 8)
         {
-            Destroy(gameObject);
-            Destroy(collision.gameObject); // Destroy the bullet
+            health--;
+            Destroy(collision.gameObject);
+
+            // If health is 0, destroy the ship and call GameOver()
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+                logic.GameOver();
+            }
         }
     }
 

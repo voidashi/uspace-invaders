@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Wave01Script : MonoBehaviour
 {
+    public LogicScript logic;
     public float speed = 1f;
     public float downMovement = 1f;
 
@@ -12,7 +13,7 @@ public class Wave01Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
@@ -40,6 +41,12 @@ public class Wave01Script : MonoBehaviour
             direction = 1;
             transform.Translate(Vector3.down * downMovement);
             transform.Translate(Vector3.right * Time.deltaTime * 1); // Move a bit to the right to avoid getting stuck 
+        }
+
+        // If hit the bottom, game over
+        if (transform.position.y <= -4)
+        {
+            logic.GameOver();
         }
     }
 }

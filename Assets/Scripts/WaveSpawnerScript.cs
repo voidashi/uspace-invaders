@@ -55,7 +55,7 @@ public class WaveSpawnerScript : MonoBehaviour
         }
 
         // When hit the edge 3 times, spawn a new wave
-        if (edgeCount == 4)
+        if (edgeCount == 2)
         {
             SpawnWave();
             edgeCount = 0;
