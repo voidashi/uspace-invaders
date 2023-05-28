@@ -45,7 +45,7 @@ Alterado para
 - O jogador enfrenta ondas de alienigenas, ao alcancar uma certa quantidade de pontos (no programa, 99, equivalente a 9 ondas),
 ganha o jogo
 
-A alteracao foi realizada para permitir, futuramente, um sistema que o jogo se torna infinito, com um melhor aumento na dificuldade
+A alteracao foi realizada para permitir, futuramente, um sistema que o jogo se torna infinito (em um estilo Shoot 'em up), com um melhor aumento na dificuldade
 sem serem necessarias mais fases estaticas. O sistema de surgimento de ondas permitira que elas acelerem, aumentem em numero,
 ou tenham mais inimigos que atiram, por exemplo. Alem disso, pode-se adicionar um sistema de upgrades para a nave do jogador
 ou para estruturas de colisao (nao adicionadas), que pode ser comprado com os pontos ganhos.
