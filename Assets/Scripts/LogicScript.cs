@@ -12,6 +12,8 @@ public class LogicScript : MonoBehaviour
     public GameObject gameWonScreen;
     public GameObject gamePausedScreen;
 
+    private int isPaused = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +24,19 @@ public class LogicScript : MonoBehaviour
     void Update()
     {
 
-        // If the player presses Escape, pause the game
+        // If the player presses Escape, pause the game or resume it
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseGame();
+            if (isPaused == 0)
+            {
+                PauseGame();
+                isPaused = 1;
+            }
+            else
+            {
+                ResumeGame();
+                isPaused = 0;
+            }
         }
 
         // If reached the score limit, win the game

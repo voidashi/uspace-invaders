@@ -48,5 +48,11 @@ public class Wave01Script : MonoBehaviour
         {
             logic.GameOver();
         }
+
+        // If theres no children left, destroy this object
+        if (transform.childCount == 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
